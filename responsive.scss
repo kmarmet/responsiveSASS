@@ -1,0 +1,58 @@
+// RESPONSIVE MIXINS
+@mixin lg-desktop-size {
+    @media screen and (min-width: 1800px) {
+        @content;
+    }
+}
+
+@mixin laptop-size {
+    @media screen and (max-width: 1100px) {
+        @content;
+    }
+}
+
+@mixin tablet-landscape-size {
+    @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin tablet-size {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin phone-landscape-size {
+    @media only screen and (min-width: 200px) and (max-width: 800px) and (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin phone-size {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+// RESPONSIVE STYLES
+@include lg-desktop-size {
+    .grid-cont {
+        max-width: 1400px;
+    }
+}
+
+@include laptop-size {
+}
+
+@include tablet-size {
+}
+
+@include tablet-landscape-size {
+}
+
+@include phone-size {
+}
+
+@include phone-landscape-size {
+}
